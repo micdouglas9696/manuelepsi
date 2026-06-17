@@ -154,7 +154,7 @@
 
         /* Navigation active highlight */
         .nav-link-active {
-            color: #ffffff !important;
+            color: #91452c !important;
             font-weight: 700;
             position: relative;
         }
@@ -227,27 +227,27 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary/20 paper-texture">
 <!-- TopNavBar -->
-<nav class="bg-[#1a1210]/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-white/5">
+<nav class="bg-surface/95 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 border-b border-outline-variant/10">
 <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1140px] mx-auto">
 <a class="flex items-center gap-3 group" href="#home">
   <!-- SVG logo -->
-  <svg class="h-10 w-auto text-white group-hover:scale-105 transition-transform duration-300" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+  <svg class="h-10 w-auto text-primary group-hover:scale-105 transition-transform duration-300" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
     <path d="M 45 65 C 32 65 22 52 26 38 C 30 24 45 28 52 42 C 55 48 53 58 45 65 Z" />
     <path d="M 52 42 C 60 26 78 20 86 32 C 94 44 82 68 60 76 C 52 79 46 75 45 65" />
   </svg>
   <div class="flex flex-col">
-    <span class="text-xl font-headline-md font-bold text-white tracking-tight leading-none">Manuele Wandermuren</span>
-    <span class="text-[9px] uppercase tracking-[0.18em] text-[#c8c0b7] font-bold mt-1">Psicóloga | Aceite a sua jornada</span>
+    <span class="text-xl font-headline-md font-bold text-primary tracking-tight leading-none">Manuele Wandermuren</span>
+    <span class="text-[9px] uppercase tracking-[0.18em] text-primary/60 font-bold mt-1">Psicóloga | Aceite a sua jornada</span>
   </div>
-</a>
+ </a>
 <div class="hidden md:flex gap-8 items-center">
-<a class="nav-item text-label-md font-label-md text-[#c8c0b7] hover:text-white transition-colors" href="#home">Home</a>
-<a class="nav-item text-label-md font-label-md text-[#c8c0b7] hover:text-white transition-colors" href="#minha-jornada">Minha Jornada</a>
-<a class="nav-item text-label-md font-label-md text-[#c8c0b7] hover:text-white transition-colors flex items-center gap-1" href="#abordagem">Serviços <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
-<a class="nav-item text-label-md font-label-md text-[#c8c0b7] hover:text-white transition-colors flex items-center gap-1" href="#sobre">Como Psicóloga <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
-<a class="nav-item text-label-md font-label-md text-[#c8c0b7] hover:text-white transition-colors" href="#blog">Blog</a>
+<a class="nav-item text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#home">Home</a>
+<a class="nav-item text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#minha-jornada">Minha Jornada</a>
+<a class="nav-item text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#abordagem">Serviços <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+<a class="nav-item text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#sobre">Como Psicóloga <span class="material-symbols-outlined text-[14px]">expand_more</span></a>
+<a class="nav-item text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#blog">Blog</a>
 </div>
-<button class="md:hidden text-white hover:scale-105 active:scale-95 transition-transform" id="mobile-menu-btn" aria-label="Abrir Menu">
+<button class="md:hidden text-primary hover:scale-105 active:scale-95 transition-transform" id="mobile-menu-btn" aria-label="Abrir Menu">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -255,83 +255,102 @@
 
 <!-- Mobile Menu Drawer -->
 <div id="mobile-menu-drawer" class="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden" aria-hidden="true">
-    <div class="absolute right-0 top-0 bottom-0 w-72 bg-[#1a1210] p-8 shadow-2xl flex flex-col translate-x-full transition-transform duration-300" id="mobile-menu-content">
+    <div class="absolute right-0 top-0 bottom-0 w-72 bg-background p-8 shadow-2xl flex flex-col translate-x-full transition-transform duration-300" id="mobile-menu-content">
         <div class="flex justify-between items-center mb-10">
             <a class="flex items-center gap-2" href="#home">
-              <svg class="h-8 w-auto text-white" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg class="h-8 w-auto text-primary" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M 45 65 C 32 65 22 52 26 38 C 30 24 45 28 52 42 C 55 48 53 58 45 65 Z" />
                 <path d="M 52 42 C 60 26 78 20 86 32 C 94 44 82 68 60 76 C 52 79 46 75 45 65" />
               </svg>
               <div class="flex flex-col">
-                  <span class="text-sm font-headline-md font-bold text-white leading-none">Manuele</span>
-                  <span class="text-[9px] uppercase tracking-widest text-[#c8c0b7] font-bold">Wandermuren</span>
+                  <span class="text-sm font-headline-md font-bold text-primary leading-none">Manuele</span>
+                  <span class="text-[9px] uppercase tracking-widest text-primary/60 font-bold">Wandermuren</span>
               </div>
             </a>
-            <button id="mobile-menu-close" class="text-white hover:rotate-90 transition-transform duration-200" aria-label="Fechar Menu">
+            <button id="mobile-menu-close" class="text-primary hover:rotate-90 transition-transform duration-200" aria-label="Fechar Menu">
                 <span class="material-symbols-outlined">close</span>
             </button>
         </div>
         <div class="flex flex-col gap-6">
-            <a class="mobile-nav-item text-base font-medium text-[#c8c0b7] hover:text-white transition-colors py-2 border-b border-white/10" href="#home">Home</a>
-            <a class="mobile-nav-item text-base font-medium text-[#c8c0b7] hover:text-white transition-colors py-2 border-b border-white/10" href="#minha-jornada">Minha Jornada</a>
-            <a class="mobile-nav-item text-base font-medium text-[#c8c0b7] hover:text-white transition-colors py-2 border-b border-white/10" href="#abordagem">Serviços</a>
-            <a class="mobile-nav-item text-base font-medium text-[#c8c0b7] hover:text-white transition-colors py-2 border-b border-white/10" href="#sobre">Como Psicóloga</a>
-            <a class="mobile-nav-item text-base font-medium text-[#c8c0b7] hover:text-white transition-colors py-2 border-b border-white/10" href="#blog">Blog</a>
+            <a class="mobile-nav-item text-base font-medium text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant/10" href="#home">Home</a>
+            <a class="mobile-nav-item text-base font-medium text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant/10" href="#minha-jornada">Minha Jornada</a>
+            <a class="mobile-nav-item text-base font-medium text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant/10" href="#abordagem">Serviços</a>
+            <a class="mobile-nav-item text-base font-medium text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant/10" href="#sobre">Como Psicóloga</a>
+            <a class="mobile-nav-item text-base font-medium text-on-surface-variant hover:text-primary transition-colors py-2 border-b border-outline-variant/10" href="#blog">Blog</a>
             <a class="mobile-nav-item mt-6 bg-primary text-white px-6 py-4 rounded-xl font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all text-center shadow-lg shadow-primary/20" href="#agendamento">
                 Agendar Consulta
             </a>
         </div>
-        <div class="mt-auto pt-8 border-t border-white/10 text-center">
-            <p class="text-[10px] text-white/40 uppercase tracking-widest">CRP 08/48644</p>
+        <div class="mt-auto pt-8 border-t border-outline-variant/10 text-center">
+            <p class="text-[10px] text-on-surface-variant/40 uppercase tracking-widest">CRP 08/48644</p>
         </div>
     </div>
 </div>
 
 <!-- =====================================================
-     HERO — Frase + Foto (Sem moldura, sangrado na borda inferior)
+     HERO — Frase + Foto (Como no início - Fundo Claro e Arco Clássico)
 ====================================================== -->
-<section id="home" class="bg-[#1a1210] text-white pt-16 lg:pt-24 overflow-hidden relative min-h-[90vh] flex items-stretch">
-  <!-- Soft background light effect -->
-  <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[#91452c]/5 rounded-full blur-[120px] pointer-events-none"></div>
+<section id="home" class="relative min-h-[90vh] flex items-center pt-12 pb-24 overflow-hidden bg-background">
+  <!-- Vertical Watermark Text -->
+  <div class="absolute left-0 top-0 h-full flex items-center opacity-[0.03] select-none pointer-events-none">
+    <span class="text-vertical text-[220px] font-headline-lg text-primary leading-none uppercase">Psicologia</span>
+  </div>
+  
+  <!-- Sparkles -->
+  <div class="sparkle-decor top-20 right-[15%]" style="width: 120px; height: 120px;"></div>
+  <div class="sparkle-decor bottom-40 left-[10%]" style="width: 60px; height: 60px;"></div>
 
-  <div class="max-w-[1140px] mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-stretch justify-between">
+  <div class="relative z-10 max-w-[1140px] mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center">
     
     <!-- Text Column -->
-    <div class="lg:w-7/12 flex flex-col justify-center py-20 lg:py-32 text-left">
-      <h1 class="font-serif text-white text-4xl md:text-5xl lg:text-6xl leading-[1.15] mb-8 tracking-tight font-bold fade-up">
-        Aceitar a sua jornada vai mudar a sua vida.
-      </h1>
+    <div class="order-2 lg:order-1 reveal-left flex flex-col justify-center text-left">
+      <div class="mb-6">
+        <span class="text-primary font-headline-md italic text-lg opacity-80 block mb-2">Psicologia Clínica</span>
+        <h1 class="text-display-lg font-display-lg text-primary leading-[1.15] mb-8 font-bold fade-up">
+          Aceitar a sua jornada vai mudar a sua vida.
+        </h1>
+      </div>
       
-      <p class="text-[#c8c0b7] text-base md:text-lg leading-relaxed mb-10 max-w-xl font-normal fade-up fade-up-d1">
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-10 leading-relaxed max-w-md fade-up fade-up-d1">
         Aceitar a sua jornada não significa aceitar as coisas ruins que te aconteceram, significa aceitar que você não teve escolha sobre o que te aconteceu no passado, mas tem escolha sobre seguir em frente e escrever novas histórias apesar do que te aconteceu. Fazer terapia é ter a coragem de voltar atrás pra não permanecer mais com medo do passado.
       </p>
       
-      <div class="fade-up fade-up-d2">
-        <a href="#agendamento"
-           class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-8 py-4 rounded-lg font-bold text-sm transition-all shadow-lg hover:shadow-primary/20 active:scale-95 duration-300">
-          Agende sua sessão
+      <div class="flex flex-col sm:flex-row gap-4 fade-up fade-up-d2">
+        <a href="#agendamento" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 text-center flex items-center justify-center">
+          Agendar meu atendimento
+        </a>
+        <a href="#como-funciona" class="border border-outline/30 text-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white/50 transition-all text-center flex items-center justify-center">
+          Entenda a terapia
         </a>
       </div>
     </div>
 
-    <!-- Photo Column (Arco Editorial Premium) -->
-    <div class="lg:w-5/12 relative flex items-center justify-center lg:justify-end pt-12 lg:pt-0 z-10">
-      <div class="relative w-full max-w-[360px] flex items-center justify-center lg:justify-end">
-        <!-- Giant Outline Logo Symbol -->
-        <svg class="absolute -left-20 top-1/2 -translate-y-1/2 w-[130%] h-[130%] text-primary/10 pointer-events-none z-0" viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 45 65 C 32 65 22 52 26 38 C 30 24 45 28 52 42 C 55 48 53 58 45 65 Z" />
-          <path d="M 52 42 C 60 26 78 20 86 32 C 94 44 82 68 60 76 C 52 79 46 75 45 65" />
-        </svg>
+    <!-- Photo Column -->
+    <div class="order-1 lg:order-2 relative flex justify-center reveal-right reveal-delay-200 pt-8 lg:pt-0">
+      <div class="relative w-full max-w-[420px]">
+        <!-- Absolute blurred light behind the image -->
+        <div class="absolute -top-10 -right-10 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
         
-        <!-- Premium Arched Photo Frame -->
-        <div class="relative z-10 w-full aspect-[3/4] p-1 rounded-t-[18rem] rounded-b-[2rem] bg-gradient-to-b from-primary/30 to-transparent shadow-2xl reveal-right">
-          <div class="w-full h-full rounded-t-[17.8rem] rounded-b-[1.8rem] overflow-hidden">
-            <img
-              src="public/WhatsApp Image 2026-06-05 at 19.26.06.jpeg"
-              alt="Dra. Manuele Wandermuren"
-              class="w-full h-full object-cover object-center transition-all duration-700 hover:scale-105"
-            />
-          </div>
+        <!-- The Arched Photo Frame -->
+        <div class="relative z-10 overflow-hidden shadow-2xl rounded-t-[14rem] rounded-b-[2rem] aspect-[3/4]">
+          <img
+            alt="Dra. Manuele Wandermuren"
+            class="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700"
+            src="public/WhatsApp Image 2026-06-05 at 19.26.06.jpeg"
+          />
+        </div>
+        
+        <!-- Psi Symbol Badge -->
+        <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-[#af5d42] text-white flex items-center justify-center rounded-2xl shadow-xl z-20 border-4 border-white">
+          <span class="text-4xl font-serif">Ψ</span>
+        </div>
+        
+        <!-- Rotating Text Seal -->
+        <div class="absolute top-[20%] -right-12 w-32 h-32 border border-primary/20 rounded-full flex items-center justify-center animate-spin-slow">
+          <svg class="w-full h-full text-primary/40 uppercase text-[8px] font-bold tracking-[0.2em]" viewBox="0 0 100 100">
+            <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath"></path>
+            <text><textpath href="#circlePath">Manuele Wandermuren • Psicóloga Clínica •</textpath></text>
+          </svg>
         </div>
       </div>
     </div>
