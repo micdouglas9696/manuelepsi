@@ -290,44 +290,44 @@
 <!-- =====================================================
      HERO — Frase + Foto (Como no início - Fundo Claro e Arco Clássico)
 ====================================================== -->
-<section id="home" class="relative min-h-[90vh] flex items-center pt-12 pb-24 overflow-hidden bg-background">
+<section id="home" class="relative min-h-[90vh] flex items-center pt-12 pb-16 lg:pb-24 overflow-hidden bg-background">
   <!-- Vertical Watermark Text -->
   <div class="absolute left-0 top-0 h-full flex items-center opacity-[0.03] select-none pointer-events-none">
-    <span class="text-vertical text-[220px] font-headline-lg text-primary leading-none uppercase">Psicologia</span>
+    <span class="text-vertical text-[140px] sm:text-[220px] font-headline-lg text-primary leading-none uppercase">Psicologia</span>
   </div>
   
   <!-- Sparkles -->
-  <div class="sparkle-decor top-20 right-[15%]" style="width: 120px; height: 120px;"></div>
-  <div class="sparkle-decor bottom-40 left-[10%]" style="width: 60px; height: 60px;"></div>
+  <div class="sparkle-decor top-20 right-[15%] hidden sm:block" style="width: 120px; height: 120px;"></div>
+  <div class="sparkle-decor bottom-40 left-[10%] hidden sm:block" style="width: 60px; height: 60px;"></div>
 
-  <div class="relative z-10 max-w-[1140px] mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center">
+  <div class="relative z-10 max-w-[1140px] mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
     
     <!-- Text Column -->
-    <div class="order-2 lg:order-1 reveal-left flex flex-col justify-center text-left">
+    <div class="order-2 lg:order-1 reveal-left flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
       <div class="mb-6">
-        <span class="text-primary font-headline-md italic text-lg opacity-80 block mb-2">Psicologia Clínica</span>
-        <h1 class="text-display-lg font-display-lg text-primary leading-[1.15] mb-8 font-bold fade-up">
+        <span class="text-primary font-headline-md italic text-base sm:text-lg opacity-80 block mb-2">Psicologia Clínica</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-display-lg font-display-lg text-primary leading-[1.15] mb-6 sm:mb-8 font-bold fade-up">
           Aceitar a sua jornada vai mudar a sua vida.
         </h1>
       </div>
       
-      <p class="text-body-lg font-body-lg text-on-surface-variant mb-10 leading-relaxed max-w-md fade-up fade-up-d1">
+      <p class="text-body-md sm:text-body-lg font-body-lg text-on-surface-variant mb-8 sm:mb-10 leading-relaxed max-w-md fade-up fade-up-d1 text-center lg:text-left">
         Aceitar a sua jornada não significa aceitar as coisas ruins que te aconteceram, significa aceitar que você não teve escolha sobre o que te aconteceu no passado, mas tem escolha sobre seguir em frente e escrever novas histórias apesar do que te aconteceu. Fazer terapia é ter a coragem de voltar atrás pra não permanecer mais com medo do passado.
       </p>
       
-      <div class="flex flex-col sm:flex-row gap-4 fade-up fade-up-d2">
-        <a href="#agendamento" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 text-center flex items-center justify-center">
+      <div class="flex flex-col sm:flex-row gap-4 fade-up fade-up-d2 w-full sm:w-auto">
+        <a href="#agendamento" class="bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 text-center flex items-center justify-center w-full sm:w-auto">
           Agendar meu atendimento
         </a>
-        <a href="#como-funciona" class="border border-outline/30 text-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white/50 transition-all text-center flex items-center justify-center">
+        <a href="#como-funciona" class="border border-outline/30 text-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white/50 transition-all text-center flex items-center justify-center w-full sm:w-auto">
           Entenda a terapia
         </a>
       </div>
     </div>
 
     <!-- Photo Column -->
-    <div class="order-1 lg:order-2 relative flex justify-center reveal-right reveal-delay-200 pt-8 lg:pt-0">
-      <div class="relative w-full max-w-[420px]">
+    <div class="order-1 lg:order-2 relative flex justify-center reveal-right reveal-delay-200 pt-4 lg:pt-0">
+      <div class="relative w-full max-w-[320px] sm:max-w-[420px]">
         <!-- Absolute blurred light behind the image -->
         <div class="absolute -top-10 -right-10 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
         
@@ -341,13 +341,13 @@
         </div>
         
         <!-- Psi Symbol Badge -->
-        <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-[#af5d42] text-white flex items-center justify-center rounded-2xl shadow-xl z-20 border-4 border-white">
-          <span class="text-4xl font-serif">Ψ</span>
+        <div class="absolute -bottom-4 -left-4 w-14 h-14 sm:w-20 sm:h-20 bg-[#af5d42] text-white flex items-center justify-center rounded-2xl shadow-xl z-20 border-4 border-white">
+          <span class="text-2xl sm:text-4xl font-serif">Ψ</span>
         </div>
         
         <!-- Rotating Text Seal -->
-        <div class="absolute top-[20%] -right-12 w-32 h-32 border border-primary/20 rounded-full flex items-center justify-center animate-spin-slow">
-          <svg class="w-full h-full text-primary/40 uppercase text-[8px] font-bold tracking-[0.2em]" viewBox="0 0 100 100">
+        <div class="absolute top-[20%] -right-4 sm:-right-12 w-24 h-24 sm:w-32 sm:h-32 border border-primary/20 rounded-full flex items-center justify-center animate-spin-slow">
+          <svg class="w-full h-full text-primary/40 uppercase text-[6px] sm:text-[8px] font-bold tracking-[0.2em]" viewBox="0 0 100 100">
             <path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" id="circlePath"></path>
             <text><textpath href="#circlePath">Manuele Wandermuren • Psicóloga Clínica •</textpath></text>
           </svg>
@@ -361,16 +361,16 @@
 <!-- =====================================================
      MINHA JORNADA (Com faixa colorida e foto sobreposta)
 ====================================================== -->
-<section class="py-24 bg-white overflow-hidden" id="minha-jornada">
+<section class="py-16 lg:py-24 bg-white overflow-hidden" id="minha-jornada">
   <div class="max-w-[1140px] mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
       
       <!-- Left Column (Accent Block + Overlapping Photo) -->
-      <div class="lg:col-span-5 relative flex items-center justify-center min-h-[480px] lg:min-h-[580px] reveal-left">
+      <div class="lg:col-span-5 relative flex items-center justify-center min-h-[340px] sm:min-h-[440px] lg:min-h-[580px] reveal-left">
         <!-- Colored background column on the left of the grid cell -->
-        <div class="absolute left-0 top-0 bottom-0 w-[65%] bg-primary rounded-3xl opacity-90 z-0"></div>
+        <div class="absolute left-0 top-0 bottom-6 sm:bottom-0 w-[60%] sm:w-[65%] bg-primary rounded-3xl opacity-90 z-0"></div>
         <!-- Overlapping photo -->
-        <div class="relative z-10 w-[80%] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl translate-x-8 lg:translate-x-12 border-4 border-white">
+        <div class="relative z-10 w-[75%] sm:w-[80%] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl translate-x-6 sm:translate-x-8 lg:translate-x-12 border-4 border-white">
           <img
             src="public/WhatsApp Image 2026-06-05 at 19.26.04.jpeg"
             alt="Dra. Manuele Wandermuren — Minha Jornada"
@@ -381,12 +381,12 @@
 
       <!-- Right Column (Text Content) -->
       <div class="lg:col-span-7 flex flex-col justify-center text-left reveal-right reveal-delay-200">
-        <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-6 block">Sobre mim</span>
-        <h2 class="font-serif text-[#1a1210] text-4xl lg:text-5xl leading-tight mb-8 font-bold">
+        <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-6 block text-center lg:text-left">Sobre mim</span>
+        <h2 class="font-serif text-[#1a1210] text-3xl sm:text-4xl lg:text-5xl leading-tight mb-8 font-bold text-center lg:text-left">
           Minha <em class="italic text-primary not-italic" style="font-style:italic">Jornada</em>
         </h2>
         
-        <div class="space-y-5 text-[#54433e] text-base md:text-lg leading-relaxed mb-10">
+        <div class="space-y-5 text-[#54433e] text-base md:text-lg leading-relaxed mb-10 text-left">
           <p>Sou psicóloga clínica há <strong class="text-[#1a1210]">8 anos</strong>, especialista em saúde emocional feminina. Minha abordagem é a <strong class="text-[#1a1210]">Terapia Cognitivo-Comportamental (TCC)</strong>.</p>
           <p>Depois de alguns anos atendendo, percebi que as dores das minhas pacientes chegavam em algo em comum: a <strong class="text-[#1a1210]">autocrítica</strong>. Por isso, em 2022 comecei a estudar a <strong class="text-[#1a1210]">Terapia Focada na Autocompaixão (TFC)</strong>, baseada nos estudos de Paul Gilbert, Kristin Neff e Christopher Germer.</p>
           <p>Atendo mulheres adultas que conquistaram muito, mas continuam sentindo ansiedade, insegurança, culpa ou a sensação de não serem suficientes.</p>
@@ -397,17 +397,17 @@
         <!-- Credenciais -->
         <div class="flex gap-4 mb-8">
           <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/30 flex-1">
-            <span class="block text-primary font-bold text-lg">CRP 08/48644</span>
-            <span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Registro Profissional</span>
+            <span class="block text-primary font-bold text-base sm:text-lg">CRP 08/48644</span>
+            <span class="text-[9px] sm:text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Registro Profissional</span>
           </div>
           <div class="bg-surface-container p-4 rounded-xl border border-outline-variant/30 flex-1">
-            <span class="block text-primary font-bold text-lg">TCC + TFC</span>
-            <span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Abordagens Integradas</span>
+            <span class="block text-primary font-bold text-base sm:text-lg">TCC + TFC</span>
+            <span class="text-[9px] sm:text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Abordagens Integradas</span>
           </div>
         </div>
         
         <a href="#agendamento"
-           class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 duration-300 self-start">
+           class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 duration-300 w-full sm:w-auto self-center lg:self-start">
           Quero iniciar minha jornada
         </a>
       </div>
@@ -421,19 +421,19 @@
      Foto: 19.26.08 (sofá, olhando pra esquerda / flipada)
      Layout: card escuro à esquerda / foto à direita
 ====================================================== -->
-<section class="py-24 bg-[#1a1210] text-white overflow-hidden relative" id="sobre">
+<section class="py-16 lg:py-24 bg-[#1a1210] text-white overflow-hidden relative" id="sobre">
   <div class="max-w-[1140px] mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
       <!-- Left Column (Glassmorphic Card) -->
       <div class="lg:col-span-6 z-10 relative reveal-left">
-        <div class="bg-[#1c1c19]/80 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl text-left">
-          <span class="text-[#c07a60] font-bold text-xs uppercase tracking-[0.3em] mb-6 block">Minha prática</span>
-          <h2 class="font-serif text-white text-4xl lg:text-5xl leading-tight mb-8 font-bold">
+        <div class="bg-[#1c1c19]/80 backdrop-blur-md border border-white/10 p-6 sm:p-12 rounded-3xl shadow-2xl text-center lg:text-left flex flex-col items-center lg:items-start">
+          <span class="text-[#c07a60] font-bold text-xs uppercase tracking-[0.3em] mb-6 block text-center lg:text-left">Minha prática</span>
+          <h2 class="font-serif text-white text-3xl sm:text-4xl lg:text-5xl leading-tight mb-8 font-bold text-center lg:text-left">
             Como <em class="italic text-[#c07a60] not-italic" style="font-style:italic">Psicóloga</em>
           </h2>
           
-          <div class="space-y-4 text-white/70 leading-relaxed mb-10 text-base">
+          <div class="space-y-4 text-white/70 leading-relaxed mb-10 text-base text-left">
             <p>Meu trabalho é ajudar mulheres adultas a compreenderem sua história, seus pensamentos e suas emoções, criando um <strong class="text-white">espaço seguro de acolhimento, escuta e transformação</strong>.</p>
             <p>Através da TCC, identificamos pensamentos e crenças que influenciam a forma de sentir e agir — desenvolvendo novas estratégias para uma relação mais saudável consigo mesma.</p>
             <p>Acredito que nossas experiências fazem parte da nossa história, mas <strong class="text-white">não precisam definir quem somos</strong> ou limitar o futuro que podemos construir.</p>
@@ -441,7 +441,7 @@
           </div>
           
           <a href="#agendamento"
-             class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-xl active:scale-95 duration-300">
+             class="bg-primary hover:bg-[#af5d42] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-xl active:scale-95 duration-300 w-full sm:w-auto text-center flex items-center justify-center">
             Agendar minha sessão
           </a>
         </div>
@@ -464,17 +464,17 @@
   </div>
 </section>
 <!-- Abordagem Section -->
-<section class="py-24 bg-white relative overflow-hidden" id="abordagem">
+<section class="py-16 lg:py-24 bg-white relative overflow-hidden" id="abordagem">
 <div class="max-w-[1140px] mx-auto px-6 relative z-10">
 
   <!-- Emotional headline + pain points -->
-  <div class="grid lg:grid-cols-2 gap-20 items-center mb-20">
-    <div class="reveal-left">
-      <h2 class="text-headline-lg font-headline-lg text-primary mb-6">O que você sente tem nome. E tem solução.</h2>
-      <p class="text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+  <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+    <div class="reveal-left text-center lg:text-left flex flex-col items-center lg:items-start">
+      <h2 class="text-3xl sm:text-4xl lg:text-headline-lg font-headline-lg text-primary mb-6">O que você sente tem nome. E tem solução.</h2>
+      <p class="text-body-md sm:text-body-lg text-on-surface-variant mb-8 sm:mb-10 leading-relaxed text-center lg:text-left">
         Ansiedade, autocobrança, culpa, sensação de não ser suficiente. Se você chegou até aqui, talvez já saiba que algo precisa mudar. A terapia é esse espaço — sem julgamentos, sem pressa.
       </p>
-      <a href="#agendamento" class="inline-flex items-center gap-2 bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95">
+      <a href="#agendamento" class="inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 w-full sm:w-auto text-center">
         <span class="material-symbols-outlined text-sm">calendar_month</span> Agendar meu atendimento
       </a>
     </div>
@@ -483,25 +483,25 @@
         <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
           <span class="diamond-sparkle w-4 h-4 bg-primary"></span>
         </div>
-        <p class="text-on-surface-variant font-medium">Entender de onde vêm sua ansiedade e suas reações</p>
+        <p class="text-on-surface-variant font-medium text-sm sm:text-base">Entender de onde vêm sua ansiedade e suas reações</p>
       </div>
       <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-5 hover:translate-x-2 transition-transform">
         <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
           <span class="diamond-sparkle w-4 h-4 bg-primary"></span>
         </div>
-        <p class="text-on-surface-variant font-medium">Romper padrões que você já não quer reviver</p>
+        <p class="text-on-surface-variant font-medium text-sm sm:text-base">Romper padrões que você já não quer reviver</p>
       </div>
       <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-5 hover:translate-x-2 transition-transform">
         <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
           <span class="diamond-sparkle w-4 h-4 bg-primary"></span>
         </div>
-        <p class="text-on-surface-variant font-medium">Construir uma relação mais gentil com você mesma</p>
+        <p class="text-on-surface-variant font-medium text-sm sm:text-base">Construir uma relação mais gentil com você mesma</p>
       </div>
       <div class="bg-surface-container-low p-6 rounded-xl shadow-sm border border-outline-variant/10 flex items-center gap-5 hover:translate-x-2 transition-transform">
         <div class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0">
           <span class="diamond-sparkle w-4 h-4 bg-primary"></span>
         </div>
-        <p class="text-on-surface-variant font-medium">Viver o presente sem o peso do passado e o medo do futuro</p>
+        <p class="text-on-surface-variant font-medium text-sm sm:text-base">Viver o presente sem o peso do passado e o medo do futuro</p>
       </div>
     </div>
   </div>
@@ -509,31 +509,31 @@
   <!-- Scientific approach cards -->
   <div class="text-center mb-16 reveal">
     <span class="text-primary/60 font-headline-md italic mb-4 block">Abordagem Clínica</span>
-    <h2 class="text-headline-lg font-headline-lg text-primary max-w-2xl mx-auto leading-snug">Ciência e acolhimento unidos em cada sessão.</h2>
+    <h2 class="text-3xl sm:text-headline-lg font-headline-lg text-primary max-w-2xl mx-auto leading-snug">Ciência e acolhimento unidos em cada sessão.</h2>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-100">
+    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-100 flex flex-col items-center lg:items-start text-center lg:text-left">
       <div class="w-14 h-14 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined">psychology</span>
       </div>
       <h3 class="text-xl font-headline-md text-primary mb-4">TCC</h3>
       <p class="text-body-md text-on-surface-variant opacity-80">Identifique pensamentos automáticos que sabotam sua vida e aprenda a reescrevê-los.</p>
     </div>
-    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-200">
+    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-200 flex flex-col items-center lg:items-start text-center lg:text-left">
       <div class="w-14 h-14 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined">favorite</span>
       </div>
       <h3 class="text-xl font-headline-md text-primary mb-4">Autocompaixão</h3>
       <p class="text-body-md text-on-surface-variant opacity-80">Baseada nos estudos de Kristin Neff e Paul Gilbert — para tratar a autocrítica pela raiz.</p>
     </div>
-    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-300">
+    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-300 flex flex-col items-center lg:items-start text-center lg:text-left">
       <div class="w-14 h-14 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined">bolt</span>
       </div>
       <h3 class="text-xl font-headline-md text-primary mb-4">Estratégias Práticas</h3>
       <p class="text-body-md text-on-surface-variant opacity-80">Ferramentas reais para aplicar no seu dia a dia — não só dentro da sessão.</p>
     </div>
-    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-400">
+    <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20 hover:bg-white hover:shadow-xl transition-all group reveal reveal-delay-400 flex flex-col items-center lg:items-start text-center lg:text-left">
       <div class="w-14 h-14 bg-primary-container text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <span class="material-symbols-outlined">eco</span>
       </div>
@@ -546,13 +546,13 @@
 <!-- =====================================================
      ATENDIMENTO ONLINE (Layout mosaico de fotos)
 ====================================================== -->
-<section class="py-24 bg-white relative overflow-hidden" id="como-funciona">
+<section class="py-16 lg:py-24 bg-white relative overflow-hidden" id="como-funciona">
   <div class="max-w-[1140px] mx-auto px-6 relative z-10">
     
     <!-- Top Header -->
-    <div class="flex items-center justify-between mb-16 border-b border-outline-variant/10 pb-6 reveal">
-      <h2 class="text-3xl font-serif text-[#91452c] font-bold">
-        Psicoterapia Individual <span class="font-normal font-sans text-xl text-[#54433e]/65 block lg:inline lg:ml-2">para Mulheres.</span>
+    <div class="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-4 mb-16 border-b border-outline-variant/10 pb-6 reveal">
+      <h2 class="text-2xl sm:text-3xl font-serif text-[#91452c] font-bold">
+        Psicoterapia Individual <span class="font-normal font-sans text-lg sm:text-xl text-[#54433e]/65 block lg:inline lg:ml-2">para Mulheres.</span>
       </h2>
       <div class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary shrink-0 animate-bounce">
         <span class="material-symbols-outlined text-base font-bold">arrow_downward</span>
@@ -595,17 +595,17 @@
       </div>
 
       <!-- Right Column (Text Content) -->
-      <div class="lg:col-span-6 flex flex-col justify-center text-left reveal-right reveal-delay-200">
-        <h3 class="font-serif text-[#1a1210] text-4xl leading-tight mb-8">
+      <div class="lg:col-span-6 flex flex-col justify-center text-center lg:text-left items-center lg:items-start reveal-right reveal-delay-200">
+        <h3 class="font-serif text-[#1a1210] text-3xl sm:text-4xl leading-tight mb-8">
           Atendimento <em class="italic text-primary not-italic" style="font-style:italic">Online</em>
         </h3>
         
-        <p class="text-[#54433e] text-base md:text-lg leading-relaxed mb-10">
+        <p class="text-[#54433e] text-base md:text-lg leading-relaxed mb-10 text-center lg:text-left">
           A terapia on-line é uma alternativa eficaz para quem deseja reescrever a sua história, mas precisa de flexibilidade e comodidade. As sessões acontecem por meio de videochamadas, mantendo a mesma qualidade e profundidade das sessões presenciais.
         </p>
 
         <!-- Quick highlights from original "Como Funciona" -->
-        <div class="space-y-4 mb-10 border-t border-outline-variant/15 pt-6 text-sm text-[#54433e]/85">
+        <div class="space-y-4 mb-10 border-t border-outline-variant/15 pt-6 text-sm text-[#54433e]/85 text-left w-full">
           <div class="flex items-center gap-3">
             <span class="material-symbols-outlined text-primary text-lg">schedule</span>
             <span>Sessões semanais com duração de 50 minutos.</span>
@@ -621,7 +621,7 @@
         </div>
         
         <a href="#agendamento"
-           class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-10 py-4.5 rounded-lg font-bold text-sm transition-all shadow-lg active:scale-95 duration-300 self-start">
+           class="inline-flex items-center justify-center bg-primary hover:bg-[#af5d42] text-white px-10 py-4.5 rounded-lg font-bold text-sm transition-all shadow-lg active:scale-95 duration-300 w-full sm:w-auto text-center">
           Entre em contato
         </a>
       </div>
@@ -630,41 +630,41 @@
   </div>
 </section>
 <!-- Agendamento Section -->
-<section class="py-24 bg-white relative overflow-hidden" id="agendamento">
+<section class="py-16 lg:py-24 bg-white relative overflow-hidden" id="agendamento">
 <div class="max-w-[1140px] mx-auto px-6 relative z-10">
-<div class="grid lg:grid-cols-2 gap-20 items-center">
-<div class="order-2 lg:order-1 reveal-left">
-<span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-6 block">Próximo Passo</span>
-<h2 class="text-display-lg font-display-lg text-primary mb-8 leading-tight">Inicie sua jornada de cuidado.</h2>
-<div class="space-y-6 mb-10">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<div class="order-2 lg:order-1 reveal-left text-center lg:text-left flex flex-col items-center lg:items-start">
+<span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-6 block text-center lg:text-left">Próximo Passo</span>
+<h2 class="text-3xl sm:text-4xl lg:text-display-lg font-display-lg text-primary mb-8 leading-tight text-center lg:text-left">Inicie sua jornada de cuidado.</h2>
+<div class="space-y-6 mb-10 text-left w-full">
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-primary">videocam</span>
 <div>
-<p class="font-bold text-on-surface">Online via Google Meet ou Zoom</p>
-<p class="text-sm text-on-surface-variant">Conforto e praticidade no seu ambiente.</p>
+<p class="font-bold text-on-surface text-sm sm:text-base">Online via Google Meet ou Zoom</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">Conforto e praticidade no seu ambiente.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-primary">lock</span>
 <div>
-<p class="font-bold text-on-surface">100% seguro e sigiloso</p>
-<p class="text-sm text-on-surface-variant">Ética profissional e proteção de dados.</p>
+<p class="font-bold text-on-surface text-sm sm:text-base">100% seguro e sigiloso</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">Ética profissional e proteção de dados.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-primary">female</span>
 <div>
-<p class="font-bold text-on-surface">Foco na saúde emocional feminina</p>
-<p class="text-sm text-on-surface-variant">Atendimento para mulheres a partir de 14 anos.</p>
+<p class="font-bold text-on-surface text-sm sm:text-base">Foco na saúde emocional feminina</p>
+<p class="text-xs sm:text-sm text-on-surface-variant">Atendimento para mulheres a partir de 14 anos.</p>
 </div>
 </div>
 </div>
-<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-xl active:scale-95 gap-3" href="#calendar-month-year">
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-xl active:scale-95 gap-3 w-full sm:w-auto text-center" href="#calendar-month-year">
 <span class="material-symbols-outlined">calendar_month</span> Escolher data e horário abaixo
 </a>
 </div>
 <div class="order-1 lg:order-2 relative reveal-right reveal-delay-200">
-<div class="bg-surface-container-low p-8 rounded-[3rem] border border-outline-variant/30 shadow-xl relative overflow-hidden">
+<div class="bg-surface-container-low p-4 sm:p-8 rounded-[2rem] sm:rounded-[3rem] border border-outline-variant/30 shadow-xl relative overflow-hidden">
 <div class="flex justify-between items-center mb-6">
 <div class="flex gap-2">
 <div class="w-3 h-3 rounded-full bg-primary/20"></div>
@@ -673,7 +673,7 @@
 </div>
 <span class="text-xs font-bold text-primary/60 uppercase tracking-widest">Disponibilidade</span>
 </div>
-
+ 
 <!-- Calendar Header -->
 <div class="flex justify-between items-center mb-6">
 <button id="prev-month-btn" class="w-8 h-8 flex items-center justify-center hover:bg-primary/10 rounded-full transition-colors text-primary" aria-label="Mês Anterior">
@@ -684,7 +684,7 @@
 <span class="material-symbols-outlined">chevron_right</span>
 </button>
 </div>
-
+ 
 <!-- Calendar Grid Headers -->
 <div class="grid grid-cols-7 text-center text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-wider mb-3">
 <div>Dom</div>
@@ -695,16 +695,16 @@
 <div>Sex</div>
 <div>Sáb</div>
 </div>
-
+ 
 <!-- Calendar Grid Days -->
 <div id="calendar-days-grid" class="grid grid-cols-7 gap-1.5 mb-6 text-sm font-semibold"></div>
-
+ 
 <!-- Selected Date Slots -->
 <div id="time-slots-container" class="hidden border-t border-outline-variant/20 pt-6 transition-all duration-350">
 <p class="text-xs font-bold text-primary/60 uppercase tracking-widest mb-3" id="slots-title">Horários disponíveis:</p>
 <div id="slots-grid" class="grid grid-cols-3 gap-2"></div>
 </div>
-
+ 
 <!-- Confirm Button -->
 <div id="confirm-booking-container" class="hidden mt-6 transition-all duration-350">
 <a id="whatsapp-confirm-btn" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-primary/15 active:scale-95">
@@ -719,14 +719,14 @@ Confirmar no WhatsApp
 </section>
 
 <!-- Blog Section (Moved below 'Sobre') -->
-<section class="py-24 bg-white" id="blog">
+<section class="py-16 lg:py-24 bg-white" id="blog">
 <div class="max-w-[1140px] mx-auto px-6">
-<div class="flex justify-between items-end mb-16 reveal">
+<div class="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 mb-16 text-center sm:text-left reveal">
 <div>
-<h2 class="text-headline-lg font-headline-lg text-primary mb-4">Conteúdos para sua jornada</h2>
-<p class="text-body-lg text-on-surface-variant">Informações e reflexões sobre saúde mental.</p>
+<h2 class="text-3xl sm:text-headline-lg font-headline-lg text-primary mb-4">Conteúdos para sua jornada</h2>
+<p class="text-body-md sm:text-body-lg text-on-surface-variant">Informações e reflexões sobre saúde mental.</p>
 </div>
-<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 hover:underline animate-pulse" href="#">Ver tudo <span class="material-symbols-outlined">arrow_forward</span></a>
+<a class="text-primary font-bold text-sm uppercase tracking-widest flex items-center justify-center gap-2 hover:underline animate-pulse w-full sm:w-auto" href="#">Ver tudo <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <article class="group reveal reveal-delay-100 cursor-pointer" onclick="openArticle(0)">
@@ -787,7 +787,7 @@ Confirmar no WhatsApp
     </div>
 </div>
 <!-- Testimonials Section (Solid background layout from reference) -->
-<section class="py-24 bg-[#91452c] text-white relative overflow-hidden" id="depoimentos">
+<section class="py-16 lg:py-24 bg-[#91452c] text-white relative overflow-hidden" id="depoimentos">
   <!-- Small background decorations matching the reference logo curves -->
   <div class="absolute -left-20 top-1/4 w-[350px] h-[350px] border border-white/10 rounded-full pointer-events-none"></div>
   <div class="absolute -right-20 bottom-1/4 w-[350px] h-[350px] border border-white/10 rounded-full pointer-events-none"></div>
@@ -795,13 +795,13 @@ Confirmar no WhatsApp
   <div class="max-w-[1140px] mx-auto px-6 relative z-10">
     
     <!-- Section Header with Navigation Arrows -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
-      <div class="text-left">
-        <h2 class="text-headline-lg font-display-lg text-white font-bold mb-4">Depoimentos</h2>
-        <p class="text-white/80 text-body-lg">Veja o que algumas pacientes dizem sobre mim.</p>
+    <div class="flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left gap-6 mb-16 reveal">
+      <div>
+        <h2 class="text-3xl sm:text-headline-lg font-display-lg text-white font-bold mb-4">Depoimentos</h2>
+        <p class="text-white/80 text-body-md sm:text-body-lg">Veja o que algumas pacientes dizem sobre mim.</p>
       </div>
       <!-- Reference style Navigation Arrows -->
-      <div class="flex gap-3 mt-6 md:mt-0">
+      <div class="flex gap-3 justify-center w-full md:w-auto">
         <button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-md hover:scale-105 transition-transform active:scale-95" aria-label="Anterior">
           <span class="material-symbols-outlined font-bold text-sm">arrow_back</span>
         </button>
@@ -903,54 +903,54 @@ Confirmar no WhatsApp
 </section>
 
 <!-- FAQ Section -->
-<section class="py-24 bg-surface-container-low/50" id="faq">
+<section class="py-16 lg:py-24 bg-surface-container-low/50" id="faq">
 <div class="max-w-[800px] mx-auto px-6">
 <div class="text-center mb-16 reveal">
-<h2 class="text-headline-lg font-headline-lg text-primary">Dúvidas Frequentes</h2>
+<h2 class="text-3xl sm:text-headline-lg font-headline-lg text-primary">Dúvidas Frequentes</h2>
 <div class="sparkle-decor mx-auto mt-6 opacity-10" style="width: 40px; height: 40px;"></div>
 </div>
 <div class="space-y-4 reveal reveal-delay-200">
 <details class="group bg-white rounded-xl border border-outline-variant/10 overflow-hidden transition-all shadow-sm" open="">
 <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<h4 class="text-lg font-headline-md text-tertiary">Como funciona a terapia online?</h4>
+<h4 class="text-base sm:text-lg font-headline-md text-tertiary">Como funciona a terapia online?</h4>
 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary/40">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-body-md text-on-surface-variant">
+<div class="px-6 pb-6 text-sm sm:text-body-md text-on-surface-variant">
   Sessões via Google Meet ou Zoom, semanais, com 50 minutos de duração. 100% sigilosas, tão eficazes quanto o presencial — com a comodidade de participar de onde você estiver.
 </div>
 </details>
 <details class="group bg-white rounded-xl border border-outline-variant/10 overflow-hidden transition-all shadow-sm">
 <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<h4 class="text-lg font-headline-md text-tertiary">Para quem é o seu atendimento?</h4>
+<h4 class="text-base sm:text-lg font-headline-md text-tertiary">Para quem é o seu atendimento?</h4>
 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary/40">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-body-md text-on-surface-variant">
+<div class="px-6 pb-6 text-sm sm:text-body-md text-on-surface-variant">
   Atendo mulheres adultas que desejam compreender suas emoções, lidar com ansiedade, autocobrança e padrões que se repetem — e que querem construir uma relação mais saudável consigo mesmas.
 </div>
 </details>
 <details class="group bg-white rounded-xl border border-outline-variant/10 overflow-hidden transition-all shadow-sm">
 <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<h4 class="text-lg font-headline-md text-tertiary">Você atende convênios?</h4>
+<h4 class="text-base sm:text-lg font-headline-md text-tertiary">Você atende convênios?</h4>
 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary/40">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-body-md text-on-surface-variant">
+<div class="px-6 pb-6 text-sm sm:text-body-md text-on-surface-variant">
   Atendimento particular com emissão de recibo para reembolso em planos de saúde que cobrem psicoterapia.
 </div>
 </details>
 <details class="group bg-white rounded-xl border border-outline-variant/10 overflow-hidden transition-all shadow-sm">
 <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<h4 class="text-lg font-headline-md text-tertiary">Como agendar minha primeira sessão?</h4>
+<h4 class="text-base sm:text-lg font-headline-md text-tertiary">Como agendar minha primeira sessão?</h4>
 <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-primary/40">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-body-md text-on-surface-variant">
+<div class="px-6 pb-6 text-sm sm:text-body-md text-on-surface-variant">
   É simples: escolha uma data no calendário acima ou entre em contato pelo WhatsApp. Responderei em até 24h com os detalhes do seu agendamento.
 </div>
 </details>
 </div>
 <!-- FAQ bottom CTA -->
-<div class="text-center mt-12 reveal">
-  <p class="text-on-surface-variant mb-6">Ainda tem dúvidas? Me chama no WhatsApp. 💬</p>
-  <a href="https://wa.me/5521970365851" target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95">
+<div class="text-center mt-12 reveal flex flex-col items-center">
+  <p class="text-on-surface-variant mb-6 text-sm sm:text-base">Ainda tem dúvidas? Me chama no WhatsApp. 💬</p>
+  <a href="https://wa.me/5521970365851" target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg active:scale-95 w-full sm:w-auto text-center">
     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Falar pelo WhatsApp
   </a>
@@ -958,20 +958,20 @@ Confirmar no WhatsApp
 </div>
 </section>
 <!-- CTA Final -->
-<section class="py-24 bg-surface-container-low">
+<section class="py-16 lg:py-24 bg-surface-container-low">
 <div class="max-w-[1140px] mx-auto px-6">
-<div class="bg-primary-container rounded-[4rem] p-16 md:p-24 text-center relative overflow-hidden shadow-2xl reveal">
+<div class="bg-primary-container rounded-[2.5rem] sm:rounded-[4rem] p-8 sm:p-24 text-center relative overflow-hidden shadow-2xl reveal">
 <div class="sparkle-decor -top-10 -right-10 bg-white/20" style="width: 200px; height: 200px;"></div>
 <div class="sparkle-decor -bottom-10 -left-10 bg-black/10" style="width: 150px; height: 150px;"></div>
 <div class="relative z-10 max-w-2xl mx-auto">
   <span class="block text-on-primary/70 text-xs font-bold uppercase tracking-widest mb-6">Próximo passo</span>
-  <h2 class="text-headline-lg font-headline-lg text-on-primary mb-4 leading-tight">Você já carregou esse peso por tempo demais.</h2>
-  <p class="text-on-primary/80 mb-10 text-body-lg">A mudança começa com uma decisão. Agende sua primeira sessão hoje.</p>
+  <h2 class="text-3xl sm:text-headline-lg font-headline-lg text-on-primary mb-4 leading-tight">Você já carregou esse peso por tempo demais.</h2>
+  <p class="text-on-primary/80 mb-10 text-sm sm:text-body-lg">A mudança começa com uma decisão. Agende sua primeira sessão hoje.</p>
   <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="#agendamento" class="bg-white text-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-105 transition-all shadow-xl active:scale-95 inline-flex items-center justify-center gap-2">
+    <a href="#agendamento" class="bg-white text-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-105 transition-all shadow-xl active:scale-95 inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center">
       <span class="material-symbols-outlined text-sm">calendar_month</span> Agendar meu atendimento
     </a>
-    <a href="https://wa.me/5521970365851" target="_blank" class="border-2 border-white/40 text-white px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/10 transition-all active:scale-95 inline-flex items-center justify-center gap-2">
+    <a href="https://wa.me/5521970365851" target="_blank" class="border-2 border-white/40 text-white px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/10 transition-all active:scale-95 inline-flex items-center justify-center gap-2 w-full sm:w-auto text-center">
       <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Falar no WhatsApp
     </a>
