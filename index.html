@@ -10,6 +10,21 @@
 
   gtag('config', 'AW-18226568538');
 </script>
+<!-- Event snippet for Reservar horário conversion page -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18226568538/UY9OCPiX5MUcENq6jfND',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manuele Wandermuren | Psicóloga Clínica - TCC &amp; Saúde Emocional Feminina</title>
@@ -669,8 +684,8 @@
 </div>
 </div>
 </div>
-<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-xl active:scale-95 gap-3 w-full sm:w-auto text-center" href="#calendar-month-year">
-<span class="material-symbols-outlined">calendar_month</span> Escolher data e horário abaixo
+<a class="inline-flex items-center justify-center bg-primary-container text-on-primary px-10 py-5 rounded-lg font-bold text-xs uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-xl active:scale-95 gap-3 w-full sm:w-auto text-center" href="#scheduling-form">
+<span class="material-symbols-outlined">calendar_month</span> Sugerir horário abaixo
 </a>
 </div>
 <div class="order-1 lg:order-2 relative reveal-right reveal-delay-200">
@@ -681,46 +696,65 @@
 <div class="w-3 h-3 rounded-full bg-primary/20"></div>
 <div class="w-3 h-3 rounded-full bg-primary/20"></div>
 </div>
-<span class="text-xs font-bold text-primary/60 uppercase tracking-widest">Disponibilidade</span>
+<span class="text-xs font-bold text-primary/60 uppercase tracking-widest">Sugestão de Horário</span>
 </div>
- 
-<!-- Calendar Header -->
-<div class="flex justify-between items-center mb-6">
-<button id="prev-month-btn" class="w-8 h-8 flex items-center justify-center hover:bg-primary/10 rounded-full transition-colors text-primary" aria-label="Mês Anterior">
-<span class="material-symbols-outlined">chevron_left</span>
+
+<!-- Scheduling Suggestion Form -->
+<div id="scheduling-form" class="space-y-6">
+
+<!-- Step 1: Intro text -->
+<p class="text-sm text-on-surface-variant leading-relaxed">
+Escolha o <strong>dia e horário que fica melhor para você</strong> e vamos verificar a disponibilidade juntas. 💛
+</p>
+
+<!-- Step 2: Day Preference -->
+<div>
+<label class="text-xs font-bold text-primary/70 uppercase tracking-widest mb-3 block">Qual dia da semana fica melhor?</label>
+<div id="day-preference-grid" class="grid grid-cols-5 gap-2">
+<button type="button" data-day="Segunda" class="day-pref-btn py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95">Seg</button>
+<button type="button" data-day="Terça" class="day-pref-btn py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95">Ter</button>
+<button type="button" data-day="Quarta" class="day-pref-btn py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95">Qua</button>
+<button type="button" data-day="Quinta" class="day-pref-btn py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95">Qui</button>
+<button type="button" data-day="Sexta" class="day-pref-btn py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95">Sex</button>
+</div>
+</div>
+
+<!-- Step 3: Period Preference -->
+<div id="period-step" class="hidden transition-all duration-350">
+<label class="text-xs font-bold text-primary/70 uppercase tracking-widest mb-3 block">Qual período do dia?</label>
+<div id="period-preference-grid" class="grid grid-cols-2 gap-3">
+<button type="button" data-period="Manhã" class="period-pref-btn py-4 px-4 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95 flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-lg">wb_sunny</span>
+Manhã
+<span class="text-[10px] font-normal text-on-surface-variant/60">09h às 12h</span>
 </button>
-<span id="calendar-month-year" class="font-headline-md text-primary text-base font-bold">Junho 2026</span>
-<button id="next-month-btn" class="w-8 h-8 flex items-center justify-center hover:bg-primary/10 rounded-full transition-colors text-primary" aria-label="Próximo Mês">
-<span class="material-symbols-outlined">chevron_right</span>
+<button type="button" data-period="Tarde" class="period-pref-btn py-4 px-4 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95 flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-lg">wb_twilight</span>
+Tarde
+<span class="text-[10px] font-normal text-on-surface-variant/60">14h às 18h</span>
 </button>
 </div>
- 
-<!-- Calendar Grid Headers -->
-<div class="grid grid-cols-7 text-center text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-wider mb-3">
-<div>Dom</div>
-<div>Seg</div>
-<div>Ter</div>
-<div>Qua</div>
-<div>Qui</div>
-<div>Sex</div>
-<div>Sáb</div>
 </div>
- 
-<!-- Calendar Grid Days -->
-<div id="calendar-days-grid" class="grid grid-cols-7 gap-1.5 mb-6 text-sm font-semibold"></div>
- 
-<!-- Selected Date Slots -->
-<div id="time-slots-container" class="hidden border-t border-outline-variant/20 pt-6 transition-all duration-350">
-<p class="text-xs font-bold text-primary/60 uppercase tracking-widest mb-3" id="slots-title">Horários disponíveis:</p>
-<div id="slots-grid" class="grid grid-cols-3 gap-2"></div>
+
+<!-- Step 4: Time Preference -->
+<div id="time-step" class="hidden transition-all duration-350">
+<label class="text-xs font-bold text-primary/70 uppercase tracking-widest mb-3 block">Qual horário você prefere?</label>
+<div id="time-preference-grid" class="grid grid-cols-3 gap-2"></div>
 </div>
- 
+
 <!-- Confirm Button -->
-<div id="confirm-booking-container" class="hidden mt-6 transition-all duration-350">
-<a id="whatsapp-confirm-btn" href="#" target="_blank" class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-primary/15 active:scale-95">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-Confirmar no WhatsApp
+<div id="confirm-booking-container" class="hidden mt-4 transition-all duration-350">
+<div class="bg-surface-container-low rounded-xl p-4 mb-4 border border-outline-variant/20">
+<p class="text-xs text-on-surface-variant mb-1">Sua sugestão:</p>
+<p id="suggestion-summary" class="text-sm font-bold text-primary"></p>
+<p class="text-[10px] text-on-surface-variant/60 mt-1 italic">Vamos confirmar a disponibilidade pelo WhatsApp</p>
+</div>
+<a id="whatsapp-confirm-btn" href="#" target="_blank" onclick="gtag_report_conversion(this.href);" class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-primary/15 active:scale-95">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.609.609l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.591-.826-6.332-2.209l-.441-.348-3.172 1.063 1.063-3.172-.348-.441A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+Enviar sugestão pelo WhatsApp
 </a>
+</div>
+
 </div>
 </div>
 </div>
@@ -751,7 +785,7 @@ Confirmar no WhatsApp
 </article>
 <article class="group reveal reveal-delay-200 cursor-pointer" onclick="openArticle(1)">
 <div class="h-64 rounded-t-[10rem] rounded-b-xl overflow-hidden mb-6 shadow-md">
-<img alt="Autocuidado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvASIicAwub7EsDtw-QGdX5-1t6LyK4rNb01-cG7H_r9KKsBPFVTknEMk-_TCScuWRxTYUTA2N4k8aSUdpbwuUUZ-lUFTwSQOZfiMNyVV4MFSEeKZScmiCmeXKV842dTnnLxDu31xOnONOtN5ddA2mTTkHj4-XVNNlW1rOAKKy1GXHa0sImJKZ0QuIJN7K9CSy3-PB10yqNXpsQQOSiSBIiWRb0frEdAvS010-JaEBg8pyoBKRCUgQ01X4"/>
+<img alt="Autocuidado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop&q=80"/>
 </div>
 <div class="px-2">
 <div class="text-primary/60 font-bold text-[10px] uppercase tracking-[0.2em] mb-2">Autocuidado</div>
@@ -831,7 +865,7 @@ Confirmar no WhatsApp
             <span class="material-symbols-outlined text-2xl font-bold">person</span>
           </div>
           <div>
-            <span class="block font-bold text-sm text-[#1c1c19]">Paciente</span>
+            <span class="block font-bold text-sm text-[#1c1c19]">Camila R.</span>
             <div class="flex text-amber-500 text-xs mt-0.5">
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
@@ -859,7 +893,7 @@ Confirmar no WhatsApp
             <span class="material-symbols-outlined text-2xl font-bold">person</span>
           </div>
           <div>
-            <span class="block font-bold text-sm text-[#1c1c19]">Paciente</span>
+            <span class="block font-bold text-sm text-[#1c1c19]">Juliana M.</span>
             <div class="flex text-amber-500 text-xs mt-0.5">
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
@@ -887,7 +921,7 @@ Confirmar no WhatsApp
             <span class="material-symbols-outlined text-2xl font-bold">person</span>
           </div>
           <div>
-            <span class="block font-bold text-sm text-[#1c1c19]">Paciente</span>
+            <span class="block font-bold text-sm text-[#1c1c19]">Fernanda S.</span>
             <div class="flex text-amber-500 text-xs mt-0.5">
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
               <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1">star</span>
@@ -1130,184 +1164,121 @@ Confirmar no WhatsApp
     });
 
     // -------------------------------------------------------------
-    // 4. Interactive Availability Calendar Scheduler
+    // 4. Scheduling Suggestion Form
     // -------------------------------------------------------------
-    const prevMonthBtn = document.getElementById('prev-month-btn');
-    const nextMonthBtn = document.getElementById('next-month-btn');
-    const calendarMonthYear = document.getElementById('calendar-month-year');
-    const calendarDaysGrid = document.getElementById('calendar-days-grid');
-    const timeSlotsContainer = document.getElementById('time-slots-container');
-    const slotsGrid = document.getElementById('slots-grid');
-    const slotsTitle = document.getElementById('slots-title');
     const confirmBookingContainer = document.getElementById('confirm-booking-container');
     const whatsappConfirmBtn = document.getElementById('whatsapp-confirm-btn');
+    const suggestionSummary = document.getElementById('suggestion-summary');
+    const timePreferenceGrid = document.getElementById('time-preference-grid');
 
-    let currentDate = new Date();
-    // Default displayed month
-    let displayMonth = currentDate.getMonth();
-    let displayYear = currentDate.getFullYear();
-    let selectedDateStr = '';
-    let selectedTimeSlot = '';
+    let selectedDay = '';
+    let selectedPeriod = '';
+    let selectedTime = '';
 
-    const monthsPt = [
-        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-    ];
+    const morningSlots = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30'];
+    const afternoonSlots = ['14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00', '17:30', '18:00'];
 
-    const timeSlots = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
+    const btnDefault = 'py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95';
+    const btnActive = 'py-3 px-2 rounded-xl text-xs font-bold transition-all text-center border border-primary bg-primary text-white shadow-md cursor-pointer active:scale-95';
+    const periodBtnDefault = 'period-pref-btn py-4 px-4 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95 flex flex-col items-center gap-1';
+    const periodBtnActive = 'period-pref-btn py-4 px-4 rounded-xl text-xs font-bold transition-all text-center border border-primary bg-primary text-white shadow-md cursor-pointer active:scale-95 flex flex-col items-center gap-1';
 
-    function generateCalendar(month, year) {
-        if (!calendarDaysGrid || !calendarMonthYear) return;
-        calendarDaysGrid.innerHTML = '';
-        calendarMonthYear.textContent = `${monthsPt[month]} ${year}`;
+    // Day preference buttons
+    document.querySelectorAll('.day-pref-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectedDay = btn.getAttribute('data-day');
+            selectedPeriod = '';
+            selectedTime = '';
 
-        const firstDayIndex = new Date(year, month, 1).getDay();
-        const totalDays = new Date(year, month + 1, 0).getDate();
-        
-        // Blank spots for previous month offset
-        for (let i = 0; i < firstDayIndex; i++) {
-            const blank = document.createElement('div');
-            blank.className = 'text-center py-2 text-on-surface-variant/20';
-            blank.textContent = '';
-            calendarDaysGrid.appendChild(blank);
-        }
+            // Reset all day buttons
+            document.querySelectorAll('.day-pref-btn').forEach(b => b.className = btnDefault);
+            btn.className = btnActive;
 
-        // Days of current month
-        for (let day = 1; day <= totalDays; day++) {
-            const dayButton = document.createElement('button');
-            dayButton.type = 'button';
-            dayButton.textContent = day;
-            
-            const thisDate = new Date(year, month, day);
-            const isWeekend = (thisDate.getDay() === 0 || thisDate.getDay() === 6); // 0 = Sunday, 6 = Saturday
-            
-            // Check if date is in the past
-            const todayReset = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());
-            const isPast = thisDate < todayReset;
+            // Show period step, hide time + confirm
+            document.getElementById('period-step').classList.remove('hidden');
+            document.getElementById('time-step').classList.add('hidden');
+            confirmBookingContainer.classList.add('hidden');
 
-            let isDisabled = isPast || isWeekend;
-            
-            // Generate standard classes
-            let baseClasses = "w-full aspect-square flex items-center justify-center rounded-full transition-all focus:outline-none ";
-            
-            if (isDisabled) {
-                baseClasses += "text-on-surface-variant/30 cursor-not-allowed";
-                dayButton.disabled = true;
-            } else {
-                baseClasses += "hover:bg-primary/10 text-tertiary font-bold cursor-pointer";
-                
-                // If it is the selected date
-                const dateStr = `${day.toString().padStart(2, '0')}/${(month + 1).toString().padStart(2, '0')}/${year}`;
-                if (dateStr === selectedDateStr) {
-                    baseClasses += " bg-primary text-on-primary hover:bg-primary/95 scale-105 shadow-md";
-                } else if (day === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                    baseClasses += " border-2 border-primary/50 text-primary";
-                }
-                
-                dayButton.addEventListener('click', () => {
-                    selectDate(day, month, year);
-                });
+            // Reset period buttons
+            document.querySelectorAll('.period-pref-btn').forEach(b => {
+                b.className = periodBtnDefault;
+            });
+
+            // Smooth scroll on mobile
+            if (window.innerWidth < 1024) {
+                setTimeout(() => {
+                    document.getElementById('period-step').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
             }
-            
-            dayButton.className = baseClasses;
-            calendarDaysGrid.appendChild(dayButton);
-        }
-    }
-
-    function selectDate(day, month, year) {
-        selectedDateStr = `${day.toString().padStart(2, '0')}/${(month + 1).toString().padStart(2, '0')}/${year}`;
-        selectedTimeSlot = ''; // Reset selected slot when date changes
-        
-        // Re-generate calendar to update active states
-        generateCalendar(month, year);
-
-        // Show time slots
-        slotsTitle.textContent = `Horários para ${selectedDateStr}:`;
-        timeSlotsContainer.classList.remove('hidden');
-        confirmBookingContainer.classList.add('hidden'); // Hide confirm until time is picked
-        
-        // Populate slots
-        slotsGrid.innerHTML = '';
-        
-        // Add random variation to slots to make it look realistic (some slots already taken)
-        // Seed based on day number to remain consistent when re-clicking
-        const seed = day % 3;
-        timeSlots.forEach((slot, index) => {
-            const slotButton = document.createElement('button');
-            slotButton.type = 'button';
-            slotButton.textContent = slot;
-            
-            // simulate some slots taken
-            const isTaken = (index + seed) % 4 === 0;
-            
-            let btnClass = "py-3 px-4 rounded-xl text-xs font-bold transition-all text-center border ";
-            if (isTaken) {
-                btnClass += "bg-surface-container text-on-surface-variant/30 border-transparent cursor-not-allowed line-through";
-                slotButton.disabled = true;
-            } else {
-                btnClass += "bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95";
-                
-                if (slot === selectedTimeSlot) {
-                    btnClass += " border-primary bg-primary text-white";
-                }
-                
-                slotButton.addEventListener('click', () => {
-                    // Remove active from other slots
-                    document.querySelectorAll('#slots-grid button').forEach(btn => {
-                        if (!btn.disabled) {
-                            btn.className = "py-3 px-4 rounded-xl text-xs font-bold transition-all text-center border bg-white text-tertiary border-outline-variant/30 hover:border-primary hover:text-primary cursor-pointer active:scale-95";
-                        }
-                    });
-                    
-                    // Add active to this slot
-                    slotButton.className = "py-3 px-4 rounded-xl text-xs font-bold transition-all text-center border border-primary bg-primary text-white shadow-md cursor-pointer active:scale-95";
-                    selectedTimeSlot = slot;
-                    
-                    // Show confirm button
-                    updateWhatsAppButton();
-                });
-            }
-            
-            slotButton.className = btnClass;
-            slotsGrid.appendChild(slotButton);
         });
-        
-        // Smooth scroll to time slots container if mobile
-        if (window.innerWidth < 1024) {
-            setTimeout(() => {
-                timeSlotsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }, 150);
-        }
-    }
+    });
 
-    function updateWhatsAppButton() {
+    // Period preference buttons
+    document.querySelectorAll('.period-pref-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectedPeriod = btn.getAttribute('data-period');
+            selectedTime = '';
+
+            // Reset all period buttons
+            document.querySelectorAll('.period-pref-btn').forEach(b => {
+                b.className = periodBtnDefault;
+            });
+            btn.className = periodBtnActive;
+
+            // Show time step
+            const timeStep = document.getElementById('time-step');
+            timeStep.classList.remove('hidden');
+            confirmBookingContainer.classList.add('hidden');
+
+            // Populate time slots based on period
+            const slots = selectedPeriod === 'Manhã' ? morningSlots : afternoonSlots;
+            timePreferenceGrid.innerHTML = '';
+
+            slots.forEach(slot => {
+                const slotBtn = document.createElement('button');
+                slotBtn.type = 'button';
+                slotBtn.textContent = slot;
+                slotBtn.className = btnDefault;
+
+                slotBtn.addEventListener('click', () => {
+                    selectedTime = slot;
+
+                    // Reset all time buttons
+                    timePreferenceGrid.querySelectorAll('button').forEach(b => b.className = btnDefault);
+                    slotBtn.className = btnActive;
+
+                    // Show confirm
+                    updateSuggestion();
+                });
+
+                timePreferenceGrid.appendChild(slotBtn);
+            });
+
+            // Smooth scroll on mobile
+            if (window.innerWidth < 1024) {
+                setTimeout(() => {
+                    timeStep.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+        });
+    });
+
+    function updateSuggestion() {
         confirmBookingContainer.classList.remove('hidden');
-        const text = `Olá, Dra. Manuele! Gostaria de agendar uma consulta para o dia ${selectedDateStr} no horário das ${selectedTimeSlot}.`;
-        const phone = "5521970365851"; // Configured WhatsApp number
+        const summaryText = `${selectedDay}-feira, período da ${selectedPeriod}, às ${selectedTime}`;
+        suggestionSummary.textContent = summaryText;
+
+        const phone = '5521970365851';
+        const text = `Olá, Dra. Manuele! 😊 Gostaria de agendar uma sessão. O melhor horário para mim seria ${selectedDay}-feira, no período da ${selectedPeriod.toLowerCase()}, por volta das ${selectedTime}. Podemos verificar a disponibilidade?`;
         const encodedText = encodeURIComponent(text);
         whatsappConfirmBtn.href = `https://wa.me/${phone}?text=${encodedText}`;
-    }
 
-    if (prevMonthBtn) {
-        prevMonthBtn.addEventListener('click', () => {
-            displayMonth--;
-            if (displayMonth < 0) {
-                displayMonth = 11;
-                displayYear--;
-            }
-            generateCalendar(displayMonth, displayYear);
-        });
-    }
-
-    if (nextMonthBtn) {
-        nextMonthBtn.addEventListener('click', () => {
-            displayMonth++;
-            if (displayMonth > 11) {
-                displayMonth = 0;
-                displayYear++;
-            }
-            generateCalendar(displayMonth, displayYear);
-        });
+        // Smooth scroll to confirm on mobile
+        if (window.innerWidth < 1024) {
+            setTimeout(() => {
+                confirmBookingContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 150);
+        }
     }
 
     // -------------------------------------------------------------
@@ -1428,7 +1399,5 @@ Confirmar no WhatsApp
         });
     }
 
-    // Initialize calendar
-    generateCalendar(displayMonth, displayYear);
 </script>
 </body></html>
