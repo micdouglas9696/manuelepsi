@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR"><head>
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="81wj8iMl_zRzxBOL9i9XYlMJR1SXEUneSg1tlvTYlJg" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18226568538"></script>
 <script>
@@ -8,11 +10,39 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-18226568538');
+  gtag('config', 'AW-18226568538', {
+    'allow_enhanced_conversions': true
+  });
 </script>
 <!-- Event snippet for Reservar horário conversion page -->
 <script>
 function gtag_report_conversion(url) {
+  // Coleta dados de Enhanced Conversions (nome e telefone)
+  var userNameField = document.getElementById('ec-user-name');
+  var userPhoneField = document.getElementById('ec-user-phone');
+
+  var enhancedData = {};
+  if (userPhoneField && userPhoneField.value.trim()) {
+    // Normaliza telefone: remove espaços, parênteses, hifens e adiciona +55
+    var rawPhone = userPhoneField.value.trim().replace(/[\s\(\)\-]/g, '');
+    if (!rawPhone.startsWith('+')) {
+      rawPhone = '+55' + rawPhone;
+    }
+    enhancedData.phone_number = rawPhone;
+  }
+  if (userNameField && userNameField.value.trim()) {
+    var fullName = userNameField.value.trim().split(' ');
+    enhancedData.first_name = fullName[0];
+    if (fullName.length > 1) {
+      enhancedData.last_name = fullName.slice(1).join(' ');
+    }
+  }
+
+  // Envia dados de conversão otimizada
+  if (Object.keys(enhancedData).length > 0) {
+    gtag('set', 'user_data', enhancedData);
+  }
+
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
@@ -742,6 +772,22 @@ Tarde
 <div id="time-preference-grid" class="grid grid-cols-3 gap-2"></div>
 </div>
 
+<!-- Step 5: User Info for Enhanced Conversions -->
+<div id="user-info-step" class="hidden transition-all duration-350">
+<label class="text-xs font-bold text-primary/70 uppercase tracking-widest mb-3 block">Seus dados (para confirmarmos pelo WhatsApp)</label>
+<div class="space-y-3">
+<div>
+<input type="text" id="ec-user-name" placeholder="Seu nome" required
+  class="w-full px-4 py-3 rounded-xl border border-outline-variant/30 bg-white text-sm text-tertiary placeholder:text-on-surface-variant/40 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
+</div>
+<div>
+<input type="tel" id="ec-user-phone" placeholder="(00) 00000-0000" required
+  class="w-full px-4 py-3 rounded-xl border border-outline-variant/30 bg-white text-sm text-tertiary placeholder:text-on-surface-variant/40 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+  oninput="this.value = this.value.replace(/[^0-9\s\(\)\-\+]/g, '')" />
+</div>
+</div>
+</div>
+
 <!-- Confirm Button -->
 <div id="confirm-booking-container" class="hidden mt-4 transition-all duration-350">
 <div class="bg-surface-container-low rounded-xl p-4 mb-4 border border-outline-variant/20">
@@ -1170,6 +1216,9 @@ Enviar sugestão pelo WhatsApp
     const whatsappConfirmBtn = document.getElementById('whatsapp-confirm-btn');
     const suggestionSummary = document.getElementById('suggestion-summary');
     const timePreferenceGrid = document.getElementById('time-preference-grid');
+    const userInfoStep = document.getElementById('user-info-step');
+    const ecUserName = document.getElementById('ec-user-name');
+    const ecUserPhone = document.getElementById('ec-user-phone');
 
     let selectedDay = '';
     let selectedPeriod = '';
@@ -1194,9 +1243,10 @@ Enviar sugestão pelo WhatsApp
             document.querySelectorAll('.day-pref-btn').forEach(b => b.className = btnDefault);
             btn.className = btnActive;
 
-            // Show period step, hide time + confirm
+            // Show period step, hide time + confirm + user info
             document.getElementById('period-step').classList.remove('hidden');
             document.getElementById('time-step').classList.add('hidden');
+            userInfoStep.classList.add('hidden');
             confirmBookingContainer.classList.add('hidden');
 
             // Reset period buttons
@@ -1264,22 +1314,47 @@ Enviar sugestão pelo WhatsApp
     });
 
     function updateSuggestion() {
-        confirmBookingContainer.classList.remove('hidden');
-        const summaryText = `${selectedDay}-feira, período da ${selectedPeriod}, às ${selectedTime}`;
-        suggestionSummary.textContent = summaryText;
+        // Mostra step de dados do usuário
+        userInfoStep.classList.remove('hidden');
+        confirmBookingContainer.classList.add('hidden');
 
-        const phone = '5521970365851';
-        const text = `Olá, Dra. Manuele! 😊 Gostaria de agendar uma sessão. O melhor horário para mim seria ${selectedDay}-feira, no período da ${selectedPeriod.toLowerCase()}, por volta das ${selectedTime}. Podemos verificar a disponibilidade?`;
-        const encodedText = encodeURIComponent(text);
-        whatsappConfirmBtn.href = `https://wa.me/${phone}?text=${encodedText}`;
-
-        // Smooth scroll to confirm on mobile
+        // Smooth scroll to user info on mobile
         if (window.innerWidth < 1024) {
             setTimeout(() => {
-                confirmBookingContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                userInfoStep.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }, 150);
         }
     }
+
+    function showConfirmButton() {
+        const userName = ecUserName.value.trim();
+        const userPhone = ecUserPhone.value.trim();
+
+        if (userName.length >= 2 && userPhone.length >= 10 && selectedDay && selectedPeriod && selectedTime) {
+            confirmBookingContainer.classList.remove('hidden');
+            const summaryText = `${selectedDay}-feira, período da ${selectedPeriod}, às ${selectedTime}`;
+            suggestionSummary.textContent = summaryText;
+
+            const phone = '5521970365851';
+            const firstName = userName.split(' ')[0];
+            const text = `Olá, Dra. Manuele! 😊 Meu nome é ${userName}. Gostaria de agendar uma sessão. O melhor horário para mim seria ${selectedDay}-feira, no período da ${selectedPeriod.toLowerCase()}, por volta das ${selectedTime}. Podemos verificar a disponibilidade?`;
+            const encodedText = encodeURIComponent(text);
+            whatsappConfirmBtn.href = `https://wa.me/${phone}?text=${encodedText}`;
+
+            // Smooth scroll to confirm on mobile
+            if (window.innerWidth < 1024) {
+                setTimeout(() => {
+                    confirmBookingContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+            }
+        } else {
+            confirmBookingContainer.classList.add('hidden');
+        }
+    }
+
+    // Listener para validar campos de nome/telefone em tempo real
+    ecUserName.addEventListener('input', showConfirmButton);
+    ecUserPhone.addEventListener('input', showConfirmButton);
 
     // -------------------------------------------------------------
     // 5. Blog Modal Reader Logic
